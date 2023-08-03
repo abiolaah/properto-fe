@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reland Solution - Registration</title>
+  <style>
+    /* Your CSS styles go here */
+    /* ... (existing CSS styles) ... */
+    /* Additional styles for the registration page */
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .registration-container {
+      max-width: 400px;
+      margin: 20px auto; /* Add margin for top and bottom */
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .registration-container h2 {
+      text-align: center;
+    }
+
+    .registration-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .registration-form label {
+      margin-bottom: 5px;
+    }
+
+    .registration-form input {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .registration-form button {
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Reland Solution</h1>
+    <p>Property Management</p>
+  </header>
+  <div class="container">
+    <div class="registration-container">
+      <h2>Create Your Account</h2>
+      <form class="registration-form">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <!-- Link back to the Login Page -->
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <footer>
+    <p>Contact us at: contact@reland.com</p>
+  </footer>
+</body>
+
+</html>
