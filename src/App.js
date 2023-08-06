@@ -1,25 +1,34 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './actions/counterActions';
 import './App.css';
-
+import Home from './components/Home';
+import Login from "./components/Login";
+import Register from "./components/Register"
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 function App() {
-  const count = useSelector(state => state.counter.count);
-  const dispatch = useDispatch();
-
-  const handleIncrement = () => {
-    dispatch(increment());
-  };
-
-  const handleDecrement = () => {
-    dispatch(decrement());
-  };
+  
   return (
-    <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-    </div>
+    <>
+   
+    <Router>
+
+   
+      <Routes>
+      <Route path="/" exact element={ <Home></Home>} />
+      </Routes>
+
+      <Routes>
+      <Route path="/login" exact element={<Login></Login>} />
+      </Routes>
+     
+      
+      <Routes>
+      <Route path="/register" exact element={<Register></Register>} />
+      </Routes>
+    
+  </Router>
+
+    
+    </>
   );
 }
 

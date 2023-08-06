@@ -1,38 +1,226 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.property-listing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.property-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.property-card img {
+  width: 100%;
+}
+
+.property-details {
+  margin-top: 10px;
+}
+
+.property-details h3 {
+  margin: 5px 0;
+}
+
+.property-details p {
+  margin: 5px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Your Search CSS styles go here */
+.search-container {
+  display: none;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.search-container.active {
+  display: block;
+}
+
+.search-container h2 {
+  text-align: center;
+}
+
+.search-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-form label {
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-form input[type="text"],
+.search-form input[type="number"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.search-form select {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.search-form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px; 
+}
+
+
+.search-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: #fff;
+  background-image: url('../public/search-icon.png');
+  padding: 5px; 
+  border: none;
+  cursor: pointer;
+}
+
+.search-button::before {
+content: ""; 
+display: block;
+width: 30px;
+height: 30px; 
+background-image: url('../public/search-icon.png');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+
+/* Login */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+.login-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 50px;
+  border: 4px solid #ccc;
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* register */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.registration-container {
+  max-width: 400px;
+  margin: 20px auto; /* Add margin for top and bottom */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.registration-container h2 {
+  text-align: center;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  margin-bottom: 5px;
+}
+
+.registration-form input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.registration-form button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
