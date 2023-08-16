@@ -3,7 +3,7 @@ import "../App.css"
 import actions from './../actions/counterActions'
 import { useNavigate, useParams } from 'react-router-dom';
 export default function Edit() {
-    
+    const history = useNavigate();
     const { id } = useParams();
 
   const [houseData, sethouseData] = useState({name: "",
@@ -28,13 +28,14 @@ export default function Edit() {
     event.preventDefault();
     // Perform form submission logic here
     await actions.updateHouse(id,houseData);
+    history("/");
   };
 
 
   return (
     <div className="add-house-form-container">
     <header>
-      <h1>Add House Form</h1>
+      <h1>Edit House Details</h1>
       <p>Property Management</p>
     </header>
     <div className="container">
@@ -98,7 +99,7 @@ export default function Edit() {
           <input type="file" id="images" name="images" multiple accept="image/*" />
         </div>
 
-        <button type="submit">Add House</button>
+        <button type="submit">Update House</button>
       </form>
     </div>
 

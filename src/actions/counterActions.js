@@ -31,12 +31,22 @@ const actions = {
     try {
       console.log(id,formData)
       const { data } = await api.updateHouse(id,formData);
-      console.log(data)
+
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  deleteHouse :async (id) => {
+    try {
+      const { data } = await api.deleteHouse(id);
       return data;
     } catch (error) {
       console.log(error);
     }
   }
+
 };
 export default actions;
 

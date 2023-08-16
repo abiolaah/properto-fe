@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 export default function Admin() {
   const history = useNavigate();
   const [housingData, sethousingData] = useState([]);
-
+  const [isDelete, setisDelete] = useState(false);
   const [searchParams, setsearchParams] = useState("");
 
   var i=1;
   useEffect(() => {
     fetchHouses();
-  }, [])
+  }, [isDelete])
 
   const fetchHouses = async () => {
     try {
@@ -27,6 +27,12 @@ export default function Admin() {
   const handleEdit = async (id) =>{
     history(`/edit/${id}`); 
   }
+
+  const handleDelete=async (e,id)=>{
+    e.preventDefault();
+    await actions.deleteHouse(id);
+    setisDelete(true);
+  }
   return (
     <div>
         <header>
@@ -40,7 +46,7 @@ export default function Admin() {
           <table>
             <tr>
               <th>ID</th>
-              <th>{housingData.name}</th>
+              <th>Property Type : </th>
               <th>Location</th>
               <th>Property Type</th>
               <th>Price</th>
@@ -59,6 +65,7 @@ export default function Admin() {
                  <td className="actions">
                    <a onClick={()=>handleView(house._id)} >View</a>
                    <a onClick={()=>handleEdit(house._id)}>Edit</a>
+                   <a onClick={(e)=>handleDelete(e,house._id)}>Delete</a>
                  </td>
                </tr>
               ))}

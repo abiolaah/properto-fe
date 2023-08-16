@@ -76,7 +76,7 @@ const Home = () => {
                 <div className="property-card" data-location="Scarborough" data-property-type="house" data-price="500000">
                 <img src="property-image-1.jpg" alt="Property 1" />
                 <div className="property-details">
-                  <h3>Property 1</h3>
+                  <h3>{house.name}</h3>
                   <p>Address : {house.address}</p>
                   <p>Property Type: House</p>
                   <p>Price: {house.price}</p>
