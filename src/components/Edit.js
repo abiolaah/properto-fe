@@ -39,7 +39,7 @@ export default function Edit() {
       <p>Property Management</p>
     </header>
     <div className="container">
-      <h2>Add a New House</h2>
+      
 
       {/* Add House Form */}
       <form id="addHouseForm" onSubmit={handleSubmit}>

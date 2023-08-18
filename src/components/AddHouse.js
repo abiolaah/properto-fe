@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import "../App.css"
 import actions from './../actions/counterActions'
 import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 export default function AddHouse() {
 
-  
-
   const history = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
   const [houseData, sethouseData] = useState({name: "",
     address: "",
     type: "",
@@ -21,10 +21,30 @@ export default function AddHouse() {
   const handleSubmit =async (event) => {
     event.preventDefault();
     // Perform form submission logic here
-  const res =  await actions.addHouse(houseData);
-  console.log(res);
-  history("/");
+    handleImageUpload();
+    await actions.addHouse(houseData);
+   // history("/");
   };
+
+  
+
+  const handleImageChange = (event) => {
+    setSelectedImage(event.target.files[0]);
+  };
+
+  const handleImageUpload = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('image', selectedImage);
+      
+      const response = await axios.post('http://localhost:4987/api/house/upload', formData);
+      console.log('Image uploaded:', response);
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
+  };
+
+
   return (
     <div className="add-house-form-container">
     <header>
@@ -90,7 +110,7 @@ export default function AddHouse() {
 
         <div className="form-group">
           <label htmlFor="images">Images:</label>
-          <input type="file" id="images" name="images" multiple accept="image/*" />
+          <input type="file" id="images" name="images" multiple accept="image/*" onChange={handleImageChange} />
         </div>
 
         <button type="submit">Add House</button>

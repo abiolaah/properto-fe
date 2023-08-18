@@ -11,7 +11,7 @@ export default function Admin() {
   var i=1;
   useEffect(() => {
     fetchHouses();
-  }, [isDelete])
+  }, [housingData])
 
   const fetchHouses = async () => {
     try {
