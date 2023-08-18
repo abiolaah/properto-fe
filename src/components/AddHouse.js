@@ -11,7 +11,7 @@ export default function AddHouse() {
     name: "",
     address: "",
     type: "",
-    status: "For sale",
+    status: "",
     price: "",
     bedrooms: "",
     bathrooms: "",
@@ -110,8 +110,8 @@ console.log(houseData);
           </div>
 
           <div className="form-group">
-            <label htmlFor="images">Property Type :</label>
-            <input type="text" id="property-name" name="property-name" onChange={(e) => sethouseData({ ...houseData, type: e.target.value })} required />
+            <label htmlFor="images">Status :</label>
+            <input type="text" id="property-name" name="property-name" onChange={(e) => sethouseData({ ...houseData, status: e.target.value })} required />
           </div>
 
           <div className="form-group">

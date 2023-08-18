@@ -1,22 +1,10 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  const history = useNavigate();
   const handleLogin = (event) => {
-    event.preventDefault(); // Prevent form submission
+  history("/home");    
 
-    // Retrieve form values
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-
-    // Perform login logic here (e.g., authentication, API call, etc.)
-    // Replace this with your actual login implementation
-
-    // For this example, we are simply logging the values to the console
-    console.log('Email:', email);
-    console.log('Password:', password);
-
-    // Clear form fields after submission (optional)
-    event.target.reset();
   };
 
   return (
@@ -30,12 +18,12 @@ const Login = () => {
           <h2>Login to Your Account</h2>
           <form className="login-form" onSubmit={handleLogin}>
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" required />
+            <input type="email" id="email"  />
 
             <label htmlFor="password">Password:</label>
-            <input type="password" id="password" required />
+            <input type="password" id="password"  />
 
-            <button type="submit">Login</button>
+            <button type="submit" onClick={handleLogin}>Login</button>
           </form>
         </div>
 

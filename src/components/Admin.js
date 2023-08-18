@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 export default function Admin() {
   const history = useNavigate();
   const [housingData, sethousingData] = useState([]);
-  const [isDelete, setisDelete] = useState(false);
   const [searchParams, setsearchParams] = useState("");
 
   var i=1;
@@ -31,7 +30,7 @@ export default function Admin() {
   const handleDelete=async (e,id)=>{
     e.preventDefault();
     await actions.deleteHouse(id);
-    setisDelete(true);
+    fetchHouses();
   }
   return (
     <div>

@@ -22,8 +22,8 @@ const PropertyDetail = () => {
   return (
     <div className="property-details-container">
       <header>
-        <a className="home-button" href="home.html">
-          <img src="home-icon.png" alt="Home" />
+        <a className="home-button" href="/home">
+          <img src="../../public/home-icon.png" alt="Home" />
         </a>
         <h1>Reland Solution</h1>
         <p>Property Management</p>
@@ -56,20 +56,7 @@ const PropertyDetail = () => {
           <p>Price: {houseDetails.price}</p>
         </div>
 
-        {/* Image Slider */}
-        {/* <div className="image-slider-container">
-          <Swiper navigation={true} slidesPerView={1} spaceBetween={10} loop={false}>
-            <SwiperSlide>
-              <img src="property-image-1.jpg" alt="Property 1.0" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="property-image-1.1.jpg" alt="Property 1.1" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="property-image-1.2.jpg" alt="Property 1.2" />
-            </SwiperSlide>
-          </Swiper>
-        </div> */}
+        
       </div>
 
       <footer>
