@@ -13,28 +13,18 @@ function App() {
     <>
     <Router>
       <Routes>
-      <Route path="/" exact element={ <Home></Home>} />
-      </Routes>
-
-      <Routes>
+      <Route path="/home" exact element={ <Home></Home>} />
       <Route path="/login" exact element={<Login></Login>} />
-      </Routes>
-      <Routes>
+      <Route path="/" exact element={<Login></Login>} />
+    
       <Route path="/register" exact element={<Register></Register>} />
-      </Routes>
-      <Routes>
+     
       <Route path="/houses/:id" exact element={<PropertyDetails></PropertyDetails>} />
-      </Routes>
-
-      <Routes>
+    
       <Route path="/admin" exact element={<Admin></Admin>} />
-      </Routes>
-
-      <Routes>
+     
       <Route path="/addhouse" exact element={<AddHouse></AddHouse>} />
-      </Routes>
-
-      <Routes>
+     
       <Route path="/edit/:id" exact element={<Edit></Edit>} />
       </Routes>
 
