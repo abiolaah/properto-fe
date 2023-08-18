@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import actions from './../actions/counterActions'
 import { useParams } from 'react-router-dom';
 import "../App.css"
+import ImageSlider from './ImageSlider';
 const PropertyDetail = () => {
   
   const { id } = useParams();
@@ -43,6 +44,7 @@ const PropertyDetail = () => {
               </a>
             </button>
           </div>
+          <ImageSlider images={houseDetails.images} />
           <p>Address: {houseDetails.address}</p>
           <p>Property Type: {houseDetails.type}</p>
           <p>Bathroom: {houseDetails.bathrooms}</p>

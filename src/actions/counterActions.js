@@ -5,8 +5,10 @@ import * as api from "../api/index";
 const actions = {
   listHouses : async (params) => {
     try {
-      const { data } = await api.listHouses(params);
-      return data;
+      console.log(params);
+
+      const  data = await api.listHouses(params);
+      return data?.data;
     } catch (error) {
       console.log(error);
     }
