@@ -22,8 +22,8 @@ const PropertyDetail = () => {
   return (
     <div className="property-details-container">
       <header>
-        <a className="home-button" href="/home">
-          <img src="../../public/home-icon.png" alt="Home" />
+        <a className="home-button" href="/home"> Back
+          {/* <img src="../../public/home-icon.png" alt="Home" /> */}
         </a>
         <h1>Reland Solution</h1>
         <p>Property Management</p>
@@ -32,7 +32,7 @@ const PropertyDetail = () => {
         {/* Property Details */}
         <div className="property-detail">
           <div className="property-header">
-            <h2>Property</h2>
+            <h2>{houseDetails.name}</h2>
             <button className="book-appointment-button">
               <a
                 className="appointment-link"

@@ -64,6 +64,9 @@ export default function Edit() {
   return (
     <div className="add-house-form-container">
       <header>
+      <a className="home-button" href="/admin"> Back
+          {/* <img src="../../public/home-icon.png" alt="Home" /> */}
+        </a>
         <h1>Edit House Details</h1>
         <p>Property Management</p>
       </header>
@@ -127,9 +130,9 @@ export default function Edit() {
             <label htmlFor="images">Images:</label>
             <input type="file" id="images" name="images" multiple accept="image/*" onChange={handleImageChange} />
           </div>
-          <div className="image-slider">
+          <div className="image-slider" >
             {houseData.images?.map(image =>
-              <img src={'http://localhost:4987/images/' + image} alt={`Image ${image}`} />
+              <img style={{padding:'10px'}} src={'http://localhost:4987/images/' + image} alt={`Image ${image}`} />
             )}
 
           </div>

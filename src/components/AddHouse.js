@@ -60,6 +60,9 @@ console.log(houseData);
   return (
     <div className="add-house-form-container">
       <header>
+      <a className="home-button" href="/admin"> Back
+          {/* <img src="../../public/home-icon.png" alt="Home" /> */}
+        </a>
         <h1>Add House Form</h1>
         <p>Property Management</p>
       </header>

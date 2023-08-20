@@ -94,9 +94,9 @@ const Home = () => {
           }
 
         </div>
-        <p>
+        {/* <p>
           Already have an account? <a href="/login">Login here</a>
-        </p>
+        </p> */}
       </div>
 
       <footer>
